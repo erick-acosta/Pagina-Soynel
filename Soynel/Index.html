@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Soynel Marciany | Neurocirugía de Alta Especialidad</title>
+    <!-- Carga de Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración para usar la fuente Inter y colores corporativos -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#0056b3', // Azul oscuro profesional
+                        'secondary-gray': '#f8f8f8', // Gris claro para secciones
+                        'accent-cyan': '#00a3c4', // Cyan para acentos
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados para efectos de sombra y hover */
+        .shadow-professional {
+            box-shadow: 0 10px 30px -5px rgba(0, 86, 179, 0.15);
+        }
+        /* Ajuste para el desplazamiento al hacer clic en enlaces fijos */
+        .section-anchor:before {
+            content: "";
+            display: block;
+            height: 90px; 
+            margin-top: -90px;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white">
+
+    <!-- Navbar Fija -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- LOGO DE LA DRA. SOYNEL MARCIANY -->
+            <div class="h-12 flex items-center">
+                <!-- Asegúrate de tener 'Logo Soynel de Los A Marciany.jpg' en tu directorio. -->
+                <img src="Logo Soynel de Los A Marciany.jpg" onerror="this.onerror=null; this.src='https://placehold.co/150x50/0056b3/ffffff?text=Logo+SM';" alt="Dra. Soynel Marciany - Neurocirujana" class="h-full object-contain">
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#perfil" class="text-gray-600 hover:text-primary-blue transition duration-300">Perfil</a>
+                <a href="#servicios" class="text-gray-600 hover:text-primary-blue transition duration-300">Servicios</a>
+                <a href="#contacto" class="text-gray-600 hover:text-primary-blue transition duration-300">Contacto</a>
+                <a href="#ubicacion" class="text-gray-600 hover:text-primary-blue transition duration-300">Ubicación</a>
+            </div>
+            <a href="#contacto" class="bg-accent-cyan text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary-blue transition duration-300 shadow-md">
+                Agenda tu Cita
+            </a>
+            <!-- Botón de menú móvil -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-primary-blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+            </button>
+        </nav>
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-2 shadow-inner">
+            <div class="flex flex-col space-y-2 text-base font-medium">
+                <a href="#perfil" class="py-2 text-gray-600 hover:text-primary-blue transition duration-300" onclick="closeMobileMenu()">Perfil</a>
+                <a href="#servicios" class="py-2 text-gray-600 hover:text-primary-blue transition duration-300" onclick="closeMobileMenu()">Servicios</a>
+                <a href="#contacto" class="py-2 text-gray-600 hover:text-primary-blue transition duration-300" onclick="closeMobileMenu()">Contacto</a>
+                <a href="#ubicacion" class="py-2 text-gray-600 hover:text-primary-blue transition duration-300" onclick="closeMobileMenu()">Ubicación</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Sección HERO/Cabecera -->
+        <section id="hero" class="relative bg-primary-blue text-white py-20 md:py-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 gap-10 items-center">
+                <!-- Contenido de Texto -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                        Dra. Soynel Marciany
+                    </h1>
+                    <p class="text-xl md:text-2xl font-light mb-6 text-accent-cyan">
+                        Neurocirugía Mínimamente Invasiva y Endovascular
+                    </p>
+                    <p class="text-lg mb-8 opacity-90">
+                        Comprometida con la máxima precisión y la pronta recuperación del paciente. Su salud neurológica es nuestra prioridad.
+                    </p>
+                    <a href="#contacto" class="inline-block bg-accent-cyan text-white text-lg font-bold px-8 py-3 rounded-xl hover:bg-white hover:text-primary-blue transition duration-500 shadow-xl transform hover:scale-105">
+                        Solicitar una Consulta
+                    </a>
+                </div>
+                <!-- FOTO PROFESIONAL DE LA DRA. SOYNEL MARCIANY -->
+                <div class="flex justify-center md:justify-end">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                        <!-- Asegúrate de tener 'image (2).png' en tu directorio. -->
+                        <img src="image (2).png" onerror="this.onerror=null; this.src='https://placehold.co/320x320/0056b3/ffffff?text=Dra.+Marciany';" alt="Dra. Soynel Marciany" class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+            </div>
+             <!-- Fondo sutil de patrón médico (SVG) -->
+            <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.1"/></pattern></defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </section>
+
+        <!-- 2. Sección Perfil Profesional -->
+        <section id="perfil" class="section-anchor py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-blue">
+                    Autoridad y Credibilidad
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Tarjeta de Perfil -->
+                    <div class="md:col-span-2 bg-secondary-gray p-8 rounded-2xl shadow-professional">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary-blue">Acerca de la Dra. Soynel Marciany</h3>
+                        <p class="mb-4 leading-relaxed">
+                            La Dra. Marciany es una Neurocirujana certificada con más de **15 años de experiencia** en el manejo de patologías complejas del sistema nervioso. Egresada de la prestigiosa [Nombre de la Universidad], realizó su subespecialidad en [Subespecialidad] en [Nombre del Hospital Internacional].
+                        </p>
+                        <p class="mb-4 leading-relaxed">
+                            Su práctica se centra en técnicas **mínimamente invasivas**, permitiendo a sus pacientes una reducción en el dolor post-operatorio y una recuperación significativamente más rápida. Es miembro activo de la [Sociedad Médica Nacional] y [Sociedad Internacional].
+                        </p>
+                        <p class="font-semibold text-accent-cyan">"La precisión es la clave en cada procedimiento."</p>
+                    </div>
+                    <!-- Tarjeta de Logros -->
+                    <div class="bg-white p-6 rounded-2xl shadow-professional border border-gray-100">
+                        <h3 class="text-xl font-semibold mb-4 text-primary-blue border-b pb-2">Logros Clave</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <!-- Icono de Certificación (SVG de Lucide) -->
+                                <svg class="w-5 h-5 text-accent-cyan mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                Certificada por [Junta Médica].
+                            </li>
+                            <li class="flex items-start">
+                                <!-- Icono de Experiencia (SVG de Lucide) -->
+                                <svg class="w-5 h-5 text-accent-cyan mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6l3 3m-3-3l-3 3m-6 2l12 0m-6 0l-3 3m3-3l3 3m-9 3l18 0"></path></svg>
+                                +500 Cirugías Exitosas de Columna.
+                            </li>
+                            <li class="flex items-start">
+                                <!-- Icono de Publicación (SVG de Lucide) -->
+                                <svg class="w-5 h-5 text-accent-cyan mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                                Autora de publicaciones en revistas indexadas.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Sección Especialidades y Servicios -->
+        <section id="servicios" class="section-anchor py-16 md:py-24 bg-secondary-gray">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-blue">
+                    Nuestras Áreas de Expertise
+                </h2>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Servicio 1: Columna Vertebral -->
+                    <div class="bg-white p-6 rounded-2xl shadow-professional hover:shadow-xl transition duration-300 transform hover:-translate-y-1 relative overflow-hidden">
+                        <img src="https://placehold.co/400x400/0056b3/ffffff?text=COLUMNA" alt="Ilustración de Cirugía de Columna" class="absolute inset-0 w-full h-full object-cover opacity-10">
+                        <div class="relative z-10">
+                            <div class="text-3xl text-accent-cyan mb-3">
+                                <!-- Icono de Columna (SVG de Lucide) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6l3 3m-3-3l-3 3m-6 2l12 0m-6 0l-3 3m3-3l3 3m-9 3l18 0"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-primary-blue">Cirugía de Columna</h3>
+                            <p class="text-gray-600">Tratamiento de hernias discales, estenosis espinal y fracturas con técnicas mínimamente invasivas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2: Tumores Cerebrales -->
+                    <div class="bg-white p-6 rounded-2xl shadow-professional hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-3xl text-accent-cyan mb-3">
+                             <!-- Icono de Cerebro (SVG de Lucide) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"></path><path d="M12 12v10"></path><path d="M12 4l-4 4"></path><path d="M12 4l4 4"></path><path d="M6 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h4"></path><path d="M18 10h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-4"></path><path d="M12 20H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h4"></path><path d="M12 20h8a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-8"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-primary-blue">Neuro-oncología</h3>
+                        <p class="text-gray-600">Diagnóstico y tratamiento quirúrgico de tumores cerebrales y medulares con neuronavegación.</p>
+                    </div>
+
+                    <!-- Servicio 3: Neurovascular -->
+                    <div class="bg-white p-6 rounded-2xl shadow-professional hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="text-3xl text-accent-cyan mb-3">
+                            <!-- Icono de Corazón/Vaso Sanguíneo (SVG de Lucide) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-2 0-3.58 1.44-4.5 3-1-1.56-2.5-3-4.5-3A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-primary-blue">Patología Neurovascular</h3>
+                        <p class="text-gray-600">Tratamiento de aneurismas, malformaciones arteriovenosas (MAV) y revascularización.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contacto" class="inline-block border-2 border-primary-blue text-primary-blue text-md font-semibold px-6 py-3 rounded-full hover:bg-primary-blue hover:text-white transition duration-300">
+                        Verificar Disponibilidad
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Sección Contacto (Conversión a WhatsApp) -->
+        <section id="contacto" class="section-anchor py-16 md:py-24 bg-accent-cyan text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Consulta Inmediata
+                </h2>
+                <p class="text-xl font-light mb-10 opacity-90">
+                    Agenda tu cita o realiza una consulta inicial de forma rápida a través de WhatsApp.
+                </p>
+
+                <!-- Botón de WhatsApp - IMPORTANTE: Reemplaza 525512345678 por el número real. -->
+                <a href="https://wa.me/525512345678?text=Hola%20Dra.%20Marciany,%20me%20gustaría%20agendar%20una%20cita.%20Mi%20nombre%20es%20[TU%20NOMBRE]%20y%20el%20motivo%20de%20mi%20consulta%20es%20[MOTIVO%20BREVE]." 
+                   target="_blank" 
+                   class="inline-flex items-center justify-center bg-[#25D366] text-white text-xl font-bold px-10 py-4 rounded-xl shadow-2xl hover:bg-[#1DA851] transition duration-300 transform hover:scale-105">
+                    <!-- Icono de WhatsApp (SVG) -->
+                    <svg class="w-7 h-7 mr-3" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.0006 2.00008C6.11584 2.00008 1.50058 6.61534 1.50058 12.5001C1.50058 15.0116 2.18568 17.3996 3.47353 19.4586L2.01258 24.0001L6.75658 22.5641C8.70614 23.6309 10.8716 24.1251 13.0006 24.0001C18.8853 23.8853 23.5006 19.3848 23.5006 13.5001C23.5006 7.61534 18.8853 2.00008 13.0006 2.00008H12.0006Z" stroke="white" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    Chatear con la Dra. por WhatsApp
+                </a>
+
+                <p class="text-sm mt-8 opacity-80">
+                    Horario de respuesta: Lunes a Viernes, 9:00 AM - 6:00 PM.
+                </p>
+            </div>
+        </section>
+
+        <!-- 5. Sección Ubicación y Horarios -->
+        <section id="ubicacion" class="section-anchor py-16 md:py-24 bg-secondary-gray">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-blue">
+                    Consúltanos en Persona
+                </h2>
+                <div class="grid md:grid-cols-2 gap-10 items-stretch">
+                    <!-- Información de Contacto -->
+                    <div class="flex flex-col justify-between bg-white p-8 rounded-2xl shadow-professional">
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-primary-blue mr-3 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <div>
+                                    <p class="font-semibold text-primary-blue">Dirección Principal</p>
+                                    <p class="text-gray-600">Av. Paseo de la Reforma #123, Consultorio 405, Colonia Juárez, Ciudad de México.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-primary-blue mr-3 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <div>
+                                    <p class="font-semibold text-primary-blue">Teléfono de Citas</p>
+                                    <a href="tel:+525512345678" class="text-gray-600 hover:text-accent-cyan transition duration-300 block">+52 (55) 1234 5678</a>
+                                    <p class="text-xs text-gray-500 mt-1">Llamada y WhatsApp disponibles.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-primary-blue mr-3 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <div>
+                                    <p class="font-semibold text-primary-blue">Horario de Consulta</p>
+                                    <p class="text-gray-600">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                                    <p class="text-gray-600">Sábados: 9:00 AM - 1:00 PM (Previa Cita)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa Placeholder (Usar un iFrame de Google Maps) -->
+                    <div class="w-full h-80 rounded-2xl overflow-hidden shadow-professional border border-gray-100">
+                        <!-- iFrame de Google Maps con ubicación de ejemplo en Reforma. -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.651717387532!2d-99.1678201!3d19.4285149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f041b65e921d%3A0x29147e45b85a1a1!2sPaseo%20de%20la%20Reforma%20123%2C%20Ju%C3%A1rez%2C%20Cuauht%C3%A9moc%2C%2006600%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX%2C%20M%C3%A9xico!5e0!3m2!1ses-419!2s!4v1700676451696!5m2!1ses-419!2s"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Pie de Página -->
+        <footer class="bg-primary-blue text-white py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+                <p>&copy; 2024 Dra. Soynel Marciany | Neurocirugía. Todos los derechos reservados.</p>
+                <div class="mt-2 space-x-4">
+                    <a href="#" class="hover:text-accent-cyan transition duration-300">Aviso Legal</a>
+                    <a href="#" class="hover:text-accent-cyan transition duration-300">Política de Privacidad</a>
+                </div>
+                <p class="mt-4 text-xs text-gray-400">Desarrollado con enfoque en precisión y recuperación.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Scripts de la Aplicación (Lógica de UI) -->
+    <script>
+        // Función para cerrar el menú móvil (usada en los enlaces internos)
+        window.closeMobileMenu = function() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        // Toggle del menú móvil al hacer clic en el ícono de hamburguesa
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
