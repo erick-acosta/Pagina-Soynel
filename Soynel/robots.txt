@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Bloquear acceso a archivos sensibles
+Disallow: /.htaccess
+Disallow: /security.js
+Disallow: /*.log
+Disallow: /admin/
+Disallow: /config/
+Disallow: /backup/
+
+# Sitemap
+Sitemap: https://www.drasoynel.com/sitemap.xml
+
+# Crawl-delay para prevenir sobrecarga
+Crawl-delay: 1

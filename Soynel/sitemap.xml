@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.drasoynel.com/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.drasoynel.com/images/image.png</image:loc>
+      <image:title>Dra. Soynel Marciany - Neurocirujana</image:title>
+      <image:caption>Dra. Soynel Marciany, especialista en neurocirugía mínimamente invasiva</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.drasoynel.com/images/Logo%20Soynel%20de%20Los%20A%20Marciany.png</image:loc>
+      <image:title>Logo Dra. Soynel Marciany</image:title>
+    </image:image>
+  </url>
+</urlset>

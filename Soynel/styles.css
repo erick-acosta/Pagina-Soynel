@@ -1,0 +1,9 @@
+/* Estilos mínimos para la página */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.shadow-professional {
+    box-shadow: 0 10px 30px -5px rgba(0, 86, 179, 0.15);
+}
