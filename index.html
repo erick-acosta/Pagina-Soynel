@@ -6,10 +6,53 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     
     <!-- SEO Optimizado -->
     <title>Dra. Soynel Marciany | Neurocirujana Especialista en Caracas | Cirugía Mínimamente Invasiva</title>
     <meta name="description" content="Dra. Soynel Marciany, neurocirujana certificada con +15 años de experiencia en Caracas, Venezuela. Especialista en cirugía de columna mínimamente invasiva, neuro-oncología y patología neurovascular. Agenda tu consulta.">
+    <meta name="keywords" content="neurocirujana caracas, cirugía columna venezuela, neurocirugía mínimamente invasiva, dra soynel marciany, neurocirujano caracas, centro médico loira">
+    <meta name="author" content="Dra. Soynel Marciany">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.drasoynel.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.drasoynel.com">
+    <meta property="og:title" content="Dra. Soynel Marciany | Neurocirujana Especialista en Caracas">
+    <meta property="og:description" content="Neurocirujana certificada con +15 años de experiencia. Especialista en cirugía mínimamente invasiva en Caracas, Venezuela.">
+    <meta property="og:image" content="https://www.drasoynel.com/Soynel/images/image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.drasoynel.com">
+    <meta property="twitter:title" content="Dra. Soynel Marciany | Neurocirujana Caracas">
+    <meta property="twitter:description" content="Neurocirujana especialista en cirugía mínimamente invasiva. +15 años de experiencia en Caracas, Venezuela.">
+    <meta property="twitter:image" content="https://www.drasoynel.com/Soynel/images/image.png">
+    
+    <!-- Datos Estructurados JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "Dra. Soynel Marciany - Neurocirugía",
+      "description": "Neurocirujana especialista en cirugía mínimamente invasiva",
+      "url": "https://www.drasoynel.com",
+      "telephone": "+58-424-199-8073",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Centro Médico Loira",
+        "addressLocality": "Caracas",
+        "addressCountry": "VE"
+      },
+      "physician": {
+        "@type": "Physician",
+        "name": "Dra. Soynel Marciany",
+        "medicalSpecialty": "Neurocirugía",
+        "yearsOfExperience": "15"
+      }
+    }
+    </script>
     
     <!-- Estilos -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -31,6 +74,21 @@
     <style>
         .shadow-professional {
             box-shadow: 0 10px 30px -5px rgba(0, 86, 179, 0.15);
+        }
+        
+        /* Mejoras de accesibilidad */
+        .focus-visible:focus {
+            outline: 2px solid #0d9488;
+            outline-offset: 2px;
+        }
+        
+        /* Respeto a preferencias de movimiento */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
     </style>
 </head>
@@ -88,19 +146,37 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="md:col-span-2 bg-medical-gray p-8 rounded-2xl shadow-professional">
                     <h3 class="text-2xl font-semibold mb-4 text-medical-navy">Acerca de la Dra. Soynel Marciany</h3>
-                    <p class="mb-4">
-                        La Dra. Marciany es una Neurocirujana certificada con más de 15 años de experiencia en el manejo de patologías complejas del sistema nervioso.
+                    <p class="mb-4 leading-relaxed text-justify">
+                        La Dra. Marciany es una Neurocirujana certificada con más de <strong>15 años de experiencia</strong> en el manejo de patologías complejas del sistema nervioso. Egresada de la prestigiosa Universidad del Zulia, realizó su subespecialidad en Neurocirugía en el Hospital Universitario de Dr. Miguel Peréz Carreño.
                     </p>
-                    <p class="mb-4">
-                        Su práctica se centra en técnicas mínimamente invasivas, permitiendo a sus pacientes una recuperación más rápida.
+                    <p class="mb-4 leading-relaxed text-justify">
+                        Su práctica se centra en técnicas <strong>mínimamente invasivas</strong>, permitiendo a sus pacientes una reducción en el dolor post-operatorio y una recuperación significativamente más rápida. Es Secretaria General de la Sociedad Precursora del Capítulo de Mujeres Venezolanas en la Neurocirugía.
+                    </p>
+                    <p class="font-semibold text-medical-teal italic">
+                        "La precisión es la clave en cada procedimiento."
                     </p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-professional">
-                    <h3 class="text-xl font-semibold mb-4 text-medical-navy">Logros Clave</h3>
+                <div class="bg-white p-6 rounded-2xl shadow-professional border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-4 text-medical-navy border-b pb-2">Logros Clave</h3>
                     <ul class="space-y-3 text-gray-700">
-                        <li>✓ Certificada por Junta Médica</li>
-                        <li>✓ +500 Cirugías Exitosas</li>
-                        <li>✓ Publicaciones Indexadas</li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-medical-teal mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Certificada por el Colegio de Médicos de Venezuela.
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-medical-teal mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                            +500 Cirugías Exitosas de Columna y Cerebro.
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-medical-teal mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                            Autora de publicaciones en revistas indexadas.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -191,7 +267,7 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Consulta Inmediata</h2>
             <p class="text-xl mb-10">Agenda tu cita a través de WhatsApp.</p>
-            <a href="https://wa.me/584241998073" target="_blank" class="inline-flex items-center bg-green-500 text-white text-xl font-bold px-10 py-4 rounded-xl hover:bg-green-600">
+            <a href="https://wa.me/584241998073?text=Hola%20Dra.%20Soynel%20Marciany,%20me%20interesa%20agendar%20una%20consulta%20de%20neurocirug%C3%ADa.%20%C2%BFPodr%C3%ADa%20proporcionarme%20informaci%C3%B3n%20sobre%20disponibilidad%20y%20costos%3F%20Gracias." target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-green-500 text-white text-xl font-bold px-10 py-4 rounded-xl hover:bg-green-600">
                 📱 Chatear por WhatsApp
             </a>
         </div>
